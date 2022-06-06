@@ -1,0 +1,47 @@
+:root {
+    --color-theme: #ffc04d;
+    --color-dark: rgba(0, 0, 0, 0.7);
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+#logo-img {
+    height: 20%;
+    width: 20%;
+}
+
+#logo-text {
+    font-family: Cookie, cursive;
+    font-size: xx-large;
+}
+
+.nav-item {
+    font-weight: 500;
+}
+
+.nav-link {
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+#navbar-button-sign-up {
+    background-color: var(--color-theme);
+    color: var(--color-dark);
+}
+
+.navbar-button {
+    margin-left: 1vh;
+    margin-right: 1vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+    color: var(--color-theme);
+}
+
+.nav-item :hover {
+    color: var(--color-theme);
+}
