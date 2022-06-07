@@ -7,5 +7,6 @@
     <orderEntry type="library" name="twitter-bootstrap" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="waypoints" level="application" />
+    <orderEntry type="library" name="jqueryui" level="application" />
   </component>
 </module>

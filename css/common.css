@@ -45,3 +45,8 @@ body {
 .nav-item :hover {
     color: var(--color-theme);
 }
+
+.container {
+    display: flex;
+}
+
