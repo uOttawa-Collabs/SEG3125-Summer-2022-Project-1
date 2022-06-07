@@ -13,6 +13,9 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css"
           integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg=="
           referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
     <link href="css/common.css" rel="stylesheet"/>
     <link href="css/index.css" rel="stylesheet"/>
     <link
@@ -32,6 +35,10 @@
             integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg=="
             referrerpolicy="no-referrer"
             src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/index.js"></script>
 </head>
@@ -66,8 +73,35 @@
     </nav>
 </header>
 
-<main class="container">
-
+<main>
+    <div class="container" id="search-column-container">
+        <div class="container" id="search-block-container">
+            <h2>Find the Nearest Available Lounge</h2>
+            <form id="search-form">
+                <div class="input-group" id="search-form-input-container">
+                    <label for="search-form-input-region"></label>
+                    <input class="form-control search-form-input"
+                           id="search-form-input-region"
+                           placeholder="Region"
+                           type="text">
+                    <label for="search-form-input-address"></label>
+                    <input class="form-control search-form-input"
+                           id="search-form-input-address"
+                           placeholder="Address"
+                           type="text">
+                    <label for="search-form-input-date"></label>
+                    <input class="form-control search-form-input"
+                           id="search-form-input-date" placeholder="Date"
+                           type="date">
+                    <button class="btn" id="search-form-button" type="button">Go!</button>
+                </div>
+                <a class="link-dark" href="javascript:void(0);" id="search-form-link-detect-location">
+                    📍 Use Current Location
+                </a>
+            </form>
+            <a class="link-dark" href="javascript:void(0);">Privacy Policy</a>
+        </div>
+    </div>
 </main>
 </body>
 </html>
