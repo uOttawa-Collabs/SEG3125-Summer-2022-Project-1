@@ -45,5 +45,7 @@ $(document).ready(() => {
         }
     });
 
-    searchFormInputDate.val(new Date().toISOString().substring(0, 10));
+    const today = new Date().toISOString().substring(0, 10);
+    searchFormInputDate.attr("min", today);
+    searchFormInputDate.val(today);
 });
