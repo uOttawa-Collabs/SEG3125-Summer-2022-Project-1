@@ -44,4 +44,6 @@ $(document).ready(() => {
             searchFormLinkDetectLocation.text("Sorry, your browser does not support this feature.");
         }
     });
+
+    searchFormInputDate.val(new Date().toISOString().substring(0, 10));
 });
