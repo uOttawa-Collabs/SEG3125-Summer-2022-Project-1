@@ -1,0 +1,109 @@
+#controller-container {
+    height: 90vh;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#list-container {
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0 0 0 5vh;
+}
+
+#sort-bar-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 10vh 0 10vh 0;
+}
+
+#sort-bar-select-label {
+    min-width: 20%;
+}
+
+#sort-bar-select {
+    max-width: 51%;
+}
+
+#sort-bar-select-order {
+    max-width: 49%;
+}
+
+.lounge-list-item {
+    height: 15vh;
+    background: #eee;
+    margin: 1vh 0 1vh 0;
+    padding: 0;
+    float: right;
+}
+
+.lounge-list-item-rating-comment-container {
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-theme);
+    width: 21vh;
+    height: 100%;
+    padding: 0;
+}
+
+.lounge-list-item-description-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh;
+}
+
+.lounge-list-item-rating-container {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+}
+
+.lounge-list-item-comment-container {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+}
+
+.lounge-list-item-rating-text {
+    font-size: 3.4em;
+}
+
+.lounge-list-item-rating-comment-link {
+    font-size: 0.8em;
+}
+
+.lounge-list-item-description-pricing {
+    padding: 0;
+    align-items: flex-start;
+    width: 18vh;
+}
+
+.lounge-list-item-description-pricing-unit {
+    font-size: 0.7em;
+}
+
+.lounge-list-item-description-info {
+    align-items: center;
+    font-size: 0.8em;
+    justify-content: flex-end;
+}
+
+.lounge-list-item-description-row {
+    padding: 0;
+    justify-content: space-between;
+}
+
+.lounge-list-item-description-pricing-quantity, .lounge-list-item-description-pricing-currency {
+    font-size: 1.5em;
+}
+
+.lounge-list-item-button-book {
+    background-color: var(--color-theme);
+}
+
+#lounge-list-prototype {
+    display: none;
+}

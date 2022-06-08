@@ -36,38 +36,104 @@
     <script src="js/visit-a-lounge.js"></script>
 </head>
 <body>
-<header class="container">
-    <nav class="navbar navbar-expand-sm fixed-top justify-content-center" id="navbar">
-        <div class="navbar-header" id="navbar-header">
-            <a class="navbar-brand" href="index.html" id="navbar-brand">
-                <img alt="Cat Cage Logo" id="logo-img" src="asset/img/favicon.svg">
-                <span id="logo-text">Cat Cafe</span>
-            </a>
-        </div>
-        <div class="container" id="navbar-container">
-            <ul class="navbar-nav" id="navbar-nav-ul">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="visit-a-lounge.html">Visit a Lounge</a></li>
-                <li class="nav-item"><a class="nav-link" href="meet-our-stars.html">Meet out Stars!</a></li>
-                <li class="nav-item"><a class="nav-link" href="get-involved.html">Get Involved</a></li>
-                <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-            </ul>
-            <ul class="navbar-nav navbar-right" id="navbar-nav-ul-right">
-                <li class="nav-item">
-                    <button class="btn navbar-button" href="javascript:void(0);" id="navbar-button-sign-up">Sign Up
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="btn navbar-button" href="javascript:void(0);" id="navbar-button-sign-in">Sign In
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<header id="header">
 </header>
 
-<main class="container">
-
+<main class="container" id="main">
+    <div class="container" id="controller-container">
+        <h1>Find a Lounge</h1>
+        <div class="container" id="sort-bar-container">
+            <label for="sort-bar-select-container" id="sort-bar-select-label">Sort by: </label>
+            <div class="input-group" id="sort-bar-select-container">
+                <label for="sort-bar-select"></label>
+                <select title="Sort By" class="form-select" id="sort-bar-select">
+                    <option selected value="suggested">Suggested</option>
+                    <option value="rating">Rating</option>
+                    <option value="price">Price</option>
+                    <option value="distance">Distance</option>
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="comment">Comment No.</option>
+                </select>
+                <label for="sort-bar-select-order"></label>
+                <select title="Order" class="form-select" id="sort-bar-select-order">
+                    <option selected value="-1">Descending</option>
+                    <option value="1">Ascending</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <!-- This is the prototype for all lounge list item, hidden by default -->
+    <div class="container lounge-list-item" id="lounge-list-prototype">
+        <img alt="Lounge thumbnail" class="lounge-thumbnail" src="asset/img/lounge-placeholder.jpg">
+        <div class="container lounge-list-item-rating-comment-container">
+            <div class="container lounge-list-item-rating-container">
+                <div class="lounge-list-item-rating">
+                    <h1 class="lounge-list-item-rating-text">0.0</h1>
+                </div>
+                <div class="lounge-list-item-rating-overall">
+                    <h6 class="lounge-list-item-rating-overall-text">/5</h6>
+                </div>
+            </div>
+            <div class="container lounge-list-item-comment-container">
+                <a class="link-dark lounge-list-item-rating-comment-link" href="javascript:void(0);">
+                    (<span class="lounge-list-item-rating-comment-count">0</span> Comments)
+                </a>
+            </div>
+        </div>
+        <div class="container lounge-list-item-description-container">
+            <div class="container lounge-list-item-description-row">
+                <h4 class="lounge-list-item-description-name">Lounge Name</h4>
+                <div>
+                    <button class="btn lounge-list-item-button-book" type="button">Book!</button>
+                    <button class="btn lounge-list-item-button-view-map" type="button">View in Google Map</button>
+                </div>
+            </div>
+            <div class="container lounge-list-item-description-row">
+                <p class="lounge-list-item-description-paragraph">
+                    A short description will appear here.
+                </p>
+            </div>
+            <div class="container lounge-list-item-description-row">
+                <div class="container lounge-list-item-description-pricing">
+                    <span class="lounge-list-item-description-pricing-quantity">0</span>
+                    <span>&nbsp;</span>
+                    <span class="lounge-list-item-description-pricing-currency">$</span>
+                    <span>&nbsp;</span>
+                    <span class="lounge-list-item-description-pricing-unit">per hour</span>
+                </div>
+                <div class="container lounge-list-item-description-info">
+                    <span class="lounge-list-item-description-info-closed-message">Closing Message Here</span>
+                    <span>&nbsp;·&nbsp;</span>
+                    <span class="lounge-list-item-description-info-start-day">
+                            Mon.
+                            </span>
+                    <span>&nbsp;~&nbsp;</span>
+                    <span class="lounge-list-item-description-info-end-day">
+                            Mon.
+                        </span>
+                    <span>&nbsp;·&nbsp;</span>
+                    <span class="lounge-list-item-description-info-start-time">
+                            0:00 AM
+                        </span>
+                    <span>&nbsp;~&nbsp;</span>
+                    <span class="lounge-list-item-description-info-end-time">
+                            0:00 AM
+                         </span>
+                    <span>&nbsp;·&nbsp;</span>
+                    <span class="lounge-list-item-description-info-distance-quantity">
+                            0
+                        </span>
+                    <span>&nbsp;</span>
+                    <span class="lounge-list-item-description-info-distance-unit">
+                            km
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Actual lounge item will be generated and inserted here -->
+    <div class="container" id="list-container">
+    </div>
 </main>
 </body>
 </html>
