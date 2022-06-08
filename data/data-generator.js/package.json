@@ -1,0 +1,14 @@
+{
+  "name": "data-generator.js",
+  "version": "1.0.0",
+  "description": "Generate data for lounges and cats.",
+  "main": "index.js",
+  "author": "wxx9248",
+  "license": "MIT",
+  "dependencies": {
+    "unique-names-generator": "^4.7.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
