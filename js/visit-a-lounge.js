@@ -1,8 +1,9 @@
 $(document).ready(() => {
     const listContainer = $("#list-container");
-    const listItemPrototype = $("#lounge-list-prototype");
+    const listItemPrototype = $("#lounge-list-item-prototype");
     const sortBarSelect = $("#sort-bar-select");
     const sortBarSelectOrder = $("#sort-bar-select-order");
+    const searchBarInput = $("#search-bar-input");
 
     const bookButtonAction = (json) => {
         return (event) => {
@@ -98,6 +99,28 @@ $(document).ready(() => {
         }
     };
 
+    const searchAction = () => {
+        const target = searchBarInput.val().trim().toLowerCase();
+        const itemArray = listContainer.children();
+
+        if (target === "") {
+            itemArray.each((index) => {
+                $(itemArray[index]).css("display", "flex");
+            });
+            return;
+        }
+
+        itemArray.each((index) => {
+            const currentItem = $(itemArray[index]);
+            const name = currentItem.find(".lounge-list-item-description-name").text().toLowerCase();
+            if (name.includes(target)) {
+                currentItem.css("display", "flex");
+            } else {
+                currentItem.css("display", "none");
+            }
+        });
+    };
+
     fetch("data/data-generator.js/lounge.json")
         .then(response => response.json())
         .then(json => {
@@ -105,7 +128,7 @@ $(document).ready(() => {
                 let listItem = listItemPrototype.clone();
 
                 // Set item ID
-                listItem.attr("id", "lounge-list-" + currentValue["id"]);
+                listItem.attr("id", "lounge-list-item-" + currentValue["id"]);
 
                 // Set lounge name
                 listItem.find(".lounge-list-item-description-name").text(currentValue["name"]);
@@ -176,5 +199,14 @@ $(document).ready(() => {
             selectPreferredOrderAction();
             sortBarSelect.change(selectPreferredOrderAction);
             sortBarSelectOrder.change(sortAction);
+
+            searchBarInput.keyup(searchAction);
+
+            // Obtain search target from URL
+            const searchTarget = getQueryVariable("search");
+            if (searchTarget) {
+                searchBarInput.val(decodeURI(searchTarget));
+                searchAction();
+            }
         });
 });

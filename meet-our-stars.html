@@ -39,6 +39,71 @@
 <header id="header">
 </header>
 <main class="container">
+    <div class="container" id="controller-container">
+        <h1 id="controller-h1">Private Encounter</h1>
+        <h3 id="controller-h3">With Our Famous Ones</h3>
+        <div class="container" id="search-bar-container">
+            <label for="search-bar-input" id="search-bar-input-label">🔎</label>
+            <input class="form-control" id="search-bar-input" placeholder="Search..." type="text">
+        </div>
+    </div>
+    <!-- This is the prototype for all star list item, hidden by default -->
+    <div class="container star-list-item" id="star-list-item-prototype">
+        <img alt="Star thumbnail" class="star-thumbnail" src="asset/img/star-placeholder.svg">
+        <div class="container star-list-item-right-container">
+            <div class="container star-list-item-description-container">
+                <div class="container star-list-item-description-row">
+                    <h4 class="star-list-item-description-name">Star Name</h4>
+                </div>
+                <div class="container star-list-item-description-row">
+                    <p class="star-list-item-description-paragraph">
+                        A description will appear here.
+                    </p>
+                </div>
+                <div class="container star-list-item-description-row">
+                    <div class="container star-list-item-description-pricing">
+                        <span class="star-list-item-description-pricing-quantity">0</span>
+                        <span>&nbsp;</span>
+                        <span class="star-list-item-description-pricing-currency">$</span>
+                        <span>&nbsp;</span>
+                        <span class="star-list-item-description-pricing-unit">per hour</span>
+                    </div>
+                    <div class="container star-list-item-description-info">
+                        <span class="star-list-item-description-info-species">
+                            Species
+                         </span>
+                        <span>&nbsp;·&nbsp;</span>
+                        <span class="star-list-item-description-info-age">
+                            Age
+                        </span>
+                        <span>&nbsp;·&nbsp;</span>
+                        <span class="star-list-item-description-info-characteristic">
+                            Characteristics
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="container star-list-item-button-container">
+                <button class="btn star-list-item-button-book" type="button">
+                    <span class="star-list-item-button-book-text-1">
+                        Book Private Room
+                    </span>
+                    <br>
+                    <span class="star-list-item-button-book-text-2">
+                        in <span class="star-list-item-button-book-text-lounge">?</span>
+                    </span>
+                </button>
+                <button class="btn star-list-item-button-view-lounge-details" type="button">
+                    <span class="star-list-item-button-view-lounge-details-text">
+                        View Lounge Details
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Actual star item will be generated and inserted here -->
+    <div class="container" id="list-container">
+    </div>
 </main>
 </body>
 </html>

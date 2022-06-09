@@ -1,0 +1,123 @@
+#controller-container {
+    height: 90vh;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#controller-h1, #controller-h3 {
+    padding: 2vh 0 2vh 0;
+}
+
+#list-container {
+    flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0 0 0 1vw;
+}
+
+#search-bar-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 10vh 0 10vh 0;
+}
+
+#search-bar-input-label {
+    min-width: 10%;
+}
+
+#search-bar-input {
+    max-width: 80%;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+}
+
+.star-list-item {
+    height: 300px;
+    background: #eee;
+    margin: 1vh 0 1vh 0;
+    padding: 0;
+    float: right;
+}
+
+.star-thumbnail {
+    height: 300px;
+    width: 300px;
+}
+
+.star-list-item-description-container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.star-list-item-comment-container {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0;
+}
+
+.star-list-item-rating-text {
+    font-size: 3.4em;
+}
+
+.star-list-item-rating-comment-link {
+    font-size: 0.8em;
+}
+
+.star-list-item-description-pricing {
+    width: 10vw;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.star-list-item-description-pricing-unit {
+    font-size: 0.7em;
+}
+
+.star-list-item-description-info {
+    align-items: center;
+    font-size: 0.8em;
+    justify-content: flex-end;
+}
+
+.star-list-item-description-row {
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.star-list-item-description-pricing-quantity, .star-list-item-description-pricing-currency {
+    font-size: 1.5em;
+}
+
+.star-list-item-button-book {
+    background-color: var(--color-theme);
+}
+
+.star-list-item-button-book-text-1  {
+    padding-bottom: 3px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.star-list-item-button-book-text-2 {
+    padding-top: 3px;
+}
+
+.star-list-item-right-container {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.star-list-item-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#star-list-item-prototype {
+    display: none;
+}

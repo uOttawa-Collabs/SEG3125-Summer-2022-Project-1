@@ -2,7 +2,7 @@
 
 ## Personal Information
 
-|                |               |
+| Key            | Value         |
 |----------------|---------------|
 | Name           | Xiaoxuan Wang |
 | Student Number | 300133594     |
