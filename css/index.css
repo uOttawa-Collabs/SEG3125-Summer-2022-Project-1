@@ -11,7 +11,12 @@ body {
     filter: invert();
 }
 
-.nav-link, #navbar-button-sign-in {
+#navbar-nav-ul {
+    backdrop-filter: brightness(80%);
+    border-radius: 20px;
+}
+
+.nav-link {
     color: #eee;
 }
 
