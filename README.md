@@ -2,7 +2,7 @@
 
 ## Personal Information
 
-|                |               |
+| Key            | Value         |
 |----------------|---------------|
 | Name           | ***REMOVED*** |
 | Student Number | ***REMOVED***     |
