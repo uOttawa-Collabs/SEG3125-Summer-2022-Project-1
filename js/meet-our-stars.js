@@ -4,11 +4,8 @@ $(document).ready(() => {
     const searchBarInput = $("#search-bar-input");
 
     const bookButtonAction = (json) => {
-        return (event) => {
-            // TODO
-            console.log("Book button");
-            console.log(json);
-            console.log(event);
+        return () => {
+            window.open("book.html?type=private&data=" + JSON.stringify(json));
         };
     };
 
@@ -23,14 +20,14 @@ $(document).ready(() => {
         const itemArray = listContainer.children();
 
         if (target === "") {
-            itemArray.each((index) => {
-                $(itemArray[index]).css("display", "flex");
+            itemArray.each((_, element) => {
+                $(element).css("display", "flex");
             });
             return;
         }
 
-        itemArray.each((index) => {
-            const currentItem = $(itemArray[index]);
+        itemArray.each((_, element) => {
+            const currentItem = $(element);
             const name = currentItem.find(".star-list-item-description-name").text().toLowerCase();
             if (name.includes(target)) {
                 currentItem.css("display", "flex");
