@@ -1,0 +1,173 @@
+#navbar-nav-ul, #navbar-nav-ul-right {
+    visibility: hidden;
+}
+
+#main {
+    flex-direction: column;
+    visibility: hidden;
+}
+
+#booking-title {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+#booking-progress-container {
+    height: 50px;
+    position: relative;
+    visibility: hidden;
+}
+
+#progress-step-container {
+    width: 100%;
+    z-index: 2;
+}
+
+#progress-step-ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.progress-step {
+    border-radius: 100%;
+    border: 2px solid var(--color-theme);
+    background-color: white;
+    color: var(--color-dark);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: larger;
+}
+
+#progress-step-ul > li.progress-step.active {
+    background-color: var(--color-theme);
+    color: white;
+}
+
+#booking-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 20px 0;
+}
+
+#progress-bar-container {
+    position: absolute;
+    top: 35%;
+    width: 96%;
+}
+
+#progress-bar {
+    background-color: var(--color-theme);
+}
+
+#booking-input-fragment-container {
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 600px;
+}
+
+.no-margin-padding {
+    padding: 0;
+    margin: 0;
+}
+
+.booking-input-left-container {
+    margin-right: 25px;
+}
+
+.booking-input-middle-container {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.booking-input-right-container {
+    margin-left: 25px;
+}
+
+#booking-buttons-container {
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+#booking-next-step-button-container {
+    justify-content: flex-end;
+}
+
+#booking-next-step-button {
+    background-color: var(--color-theme);
+}
+
+.booking-input-fragment {
+    height: 100%;
+
+}
+.booking-input-fragment-inner {
+    flex-direction: column;
+}
+.booking-input-fragment-title {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.booking-input-fragment-spacing-wrapper {
+    margin: 60px 0 60px 0;
+}
+
+.booking-time-input-group-label {
+    margin-bottom: 20px;
+}
+
+.input-group-spacing {
+    margin-bottom: 40px;
+}
+
+#booking-input-fragment-step-2-cost-table {
+    margin-top: 120px;
+}
+
+#booking-payment-platform-logo-apple-pay {
+    width: 100px;
+}
+
+#booking-payment-platform-logo-google-pay {
+    margin-top: 40px;
+    width: 160px;
+}
+
+#booking-payment-platform-logo-paypal {
+    margin-top: 45px;
+    width: 150px;
+}
+
+.booking-payment-platform-link {
+    text-decoration: none;
+}
+
+#booking-payment-platform-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking-payment-platform-container {
+    margin-top: 40px;
+}
+
+#booking-payment-platform-credit-card-container {
+    margin-top: 60px;
+    flex-direction: column;
+}
+
+#booking-input-fragment-step-3 {
+    flex-direction: column;
+}
+
+#booking-finished-prompt-wrapper {
+    font-size: large;
+    margin-top: 100px;
+}

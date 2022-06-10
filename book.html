@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="asset/img/favicon.svg" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta charset="utf-8">
+    <title>Cat Cafe - Booking</title>
+
+    <link crossorigin="anonymous"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css"
+          integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+          integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+          referrerpolicy="no-referrer" rel="stylesheet"/>
+    <link href="css/common.css" rel="stylesheet"/>
+    <link href="css/book.css" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <script crossorigin="anonymous"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+            referrerpolicy="no-referrer"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="js/common.js"></script>
+    <script src="js/book.js"></script>
+</head>
+<body>
+<header id="header">
+</header>
+<main class="container" id="main">
+    <div id="booking-title-container">
+        <span id="booking-title">Title</span>
+    </div>
+    <div id="booking-progress-container">
+        <div id="progress-step-container">
+            <ul id="progress-step-ul">
+            </ul>
+        </div>
+        <div class="progress" id="progress-bar-container">
+            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar" id="progress-bar"
+                 role="progressbar" title="Booking progress">
+            </div>
+        </div>
+    </div>
+    <div class="container" id="booking-input-fragment-container">
+        <div class="container no-margin-padding booking-input-fragment" id="booking-input-fragment-step-1">
+            <div class="container no-margin-padding booking-input-fragment-inner booking-input-left-container"
+                 id="booking-input-fragment-step-1-left-container">
+                <div class="booking-input-fragment-spacing-wrapper"
+                     id="booking-input-fragment-step-1-select-date-container">
+                    <label class="booking-time-input-group-label" for="booking-date-input">
+                        <span class="booking-input-fragment-title">Select a date</span>
+                    </label>
+                    <input class="form-control" id="booking-date-input" type="date">
+                </div>
+                <div id="booking-input-fragment-step-1-select-time-container">
+                    <label class="booking-time-input-group-label" for="booking-time-input-group">
+                        <span class="booking-input-fragment-title">Select a time period</span>
+                    </label>
+                    <div class="input-group" id="booking-time-input-group">
+                        <label class="input-group-text" for="booking-time-input-start">From</label>
+                        <input class="form-control" id="booking-time-input-start" title="From" type="time">
+                        <label class="input-group-text" for="booking-time-input-end">To</label>
+                        <input class="form-control" id="booking-time-input-end" title="To" type="time">
+                    </div>
+                </div>
+            </div>
+            <div class="vr"></div>
+            <div class="container no-margin-padding booking-input-fragment-inner booking-input-right-container"
+                 id="booking-input-fragment-step-1-right-container">
+                <div class="booking-input-fragment-spacing-wrapper"
+                     id="booking-input-fragment-step-1-contact-information-container">
+                    <label class="booking-time-input-group-label" for="booking-time-input-group">
+                        <span class="booking-input-fragment-title">Contact Information</span>
+                    </label>
+                    <div class="input-group input-group-spacing" id="contact-information-input-group-name">
+                        <label class="input-group-text" for="contact-information-input-first-name">First Name</label>
+                        <input class="form-control" id="contact-information-input-first-name" title="First Name"
+                               type="text">
+                        <label class="input-group-text" for="contact-information-input-last-name">Last Name</label>
+                        <input class="form-control" id="contact-information-input-last-name" title="Last Name"
+                               type="text">
+                    </div>
+                    <div class="input-group input-group-spacing" id="contact-information-input-group-email">
+                        <label class="input-group-text" for="contact-information-input-email">E-mail</label>
+                        <input class="form-control" id="contact-information-input-email" title="E-mail" type="email">
+                    </div>
+                    <div class="input-group input-group-spacing" id="contact-information-input-group-phone">
+                        <label class="input-group-text" for="contact-information-input-phone">Phone Number</label>
+                        <input class="form-control" id="contact-information-input-phone" title="Last Name"
+                               type="number">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container no-margin-padding booking-input-fragment" id="booking-input-fragment-step-2">
+            <div class="container no-margin-padding booking-input-fragment-inner booking-input-left-container"
+                 id="booking-input-fragment-step-2-left-container">
+                <div class="booking-input-fragment-spacing-wrapper">
+                    <span class="booking-input-fragment-title">Calculated Cost</span>
+                    <table class="table" id="booking-input-fragment-step-2-cost-table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Cost</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="vr"></div>
+            <div class="container no-margin-padding booking-input-fragment-inner booking-input-middle-container"
+                 id="booking-input-fragment-step-2-middle-container">
+                <div class="booking-input-fragment-spacing-wrapper">
+                    <span class="booking-input-fragment-title">Choose a payment platform...</span>
+                    <div class="container" id="booking-payment-platform-container">
+                        <a class="link-dark booking-payment-platform-link" href="javascript:void(0);">
+                            <img alt="Apple Pay" class="booking-payment-platform-logo"
+                                 id="booking-payment-platform-logo-apple-pay" src="asset/img/apple-pay.svg">
+                        </a>
+                        <a class="link-dark booking-payment-platform-link" href="javascript:void(0);">
+                            <img alt="Google Pay" class="booking-payment-platform-logo"
+                                 id="booking-payment-platform-logo-google-pay" src="asset/img/google-pay.svg">
+                        </a>
+                        <a class="link-dark booking-payment-platform-link" href="javascript:void(0);">
+                            <img alt="PayPal" class="booking-payment-platform-logo"
+                                 id="booking-payment-platform-logo-paypal" src="asset/img/paypal.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="vr"></div>
+            <div class="container no-margin-padding booking-input-fragment-inner booking-input-right-container"
+                 id="booking-input-fragment-step-2-right-container">
+                <div class="booking-input-fragment-spacing-wrapper">
+                    <span class="booking-input-fragment-title">...or use a credit card</span>
+                    <div class="container" id="booking-payment-platform-credit-card-container">
+                        <div class="input-group input-group-spacing"
+                             id="booking-payment-platform-input-group-card-number">
+                            <label class="input-group-text" for="booking-payment-platform-input-card-number">
+                                Card No.
+                            </label>
+                            <input class="form-control" id="booking-payment-platform-input-card-number"
+                                   maxlength="16" pattern="\d*" title="Card Number" type="text">
+                        </div>
+                        <div class="input-group input-group-spacing" id="booking-payment-platform-input-group-cvc">
+                            <label class="input-group-text" for="booking-payment-platform-input-cvc">CVC</label>
+                            <input class="form-control" id="booking-payment-platform-input-cvc" maxlength="3" pattern="\d*"
+                                   title="CVC" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container no-margin-padding booking-input-fragment" id="booking-input-fragment-step-3">
+            <h3>Payment Success!</h3>
+            <h5>Your booking reference is: <span id="booking-reference">0</span></h5>
+            <div id="booking-finished-prompt-wrapper">
+                <p>A message is sent to your e-mail and your phone with the booking reference.</p>
+                <p>Please show your booking reference to staff when entering the lounge. Thank you.</p>
+                <p>This page can be closed now.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container no-margin-padding" id="booking-buttons-container">
+        <div class="container" id="booking-previous-step-button-container">
+            <button class="btn" id="booking-previous-step-button" type="button">< Return to the Previous Step</button>
+        </div>
+        <div class="container" id="booking-next-step-button-container">
+            <button class="btn" id="booking-next-step-button" type="button">Continue to the Next Step ></button>
+        </div>
+    </div>
+</main>
+</body>
+</html>
