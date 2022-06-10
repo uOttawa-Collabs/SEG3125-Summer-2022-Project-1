@@ -51,7 +51,7 @@ I kept most of the UI design in the mockup. There are a few elements that were c
 * For the index page, I changed the image to be the background image, rather than on the right side, and I added a light
   opaque filter for the navigation bar, in order to enhance readability,
 
-## Personas
+## Adopted Goal from Peers
 
 1. Goal: Account based service for regulars
     * There are sign-in and sign-up buttons that are native for accounts. But since this is a serverless frontend page,
@@ -84,7 +84,7 @@ I kept most of the UI design in the mockup. There are a few elements that were c
 
 # Appendix
 
-Three personas that I provided in my feedback:
+Three personas that I provided in my feedbacks:
 
 1. Private Chef/Event Catering/Cooking Lesson
     * Name: Kate
