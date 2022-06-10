@@ -1,0 +1,11 @@
+#main {
+    flex-direction: column;
+}
+
+.spacer {
+    margin: 50px 0 50px 0;
+}
+
+p {
+    line-height: 50px;
+}
